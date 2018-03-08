@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">i-Meter</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="action_key">Enter in key</string>
+    <string name="error_invalid_key">This email address is invalid</string>
+    <string name="error_incorrect_key">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+
+
+    <!--strings pertaining to node list-->
+    <string name="node_faculty_of_tech_building">"Faculty of Technology Building"</string>
+    <string name="node_computer_building">"Computer Building"</string>
+
+    <!--Strings pertainingMenuActivitymenu-->
+    <string name="menu_admin_block">Admin Block</string>
+    <string name="menu_laboratory">Laboratories</string>
+    <string name="menu_hostel">Hostels</string>
+    <string name="menu_lecture_halls">Lecture Halls</string>
+    <string name="menu_business_units">Business Units</string>
+    <string name="menu_others">Others</string>
+
+    <!--Others-->
+    <string name="officer">AUTHORIZATION KEY</string>
+    <string name="reading">120.26W</string>
+
+    <string name="action_value">Enter in Value</string>
+    <string name="today">TODAY</string>
+    <string name="this_month">THIS MONTH</string>
+    <string name="this_year">THIS YEAR</string>
+    <string name="set_index">SET INDEX</string>
+    <string name="history">HISTORY</string>
+    <string name="notice_reading">*Note: Index is presented under major reading</string>
+
+
+</resources>
+

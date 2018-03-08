@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorHighlight"
+            android:gravity="center_horizontal"
+            android:paddingTop="100dp"
+            android:paddingBottom="145dp">
+
+            <RelativeLayout
+                android:id="@+id/auth_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:paddingBottom="40dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:background="@color/colorWhite"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/officerTag"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/officer"
+                    android:layout_centerHorizontal="true"
+                    />
+                <ImageView
+                    android:id="@+id/loginUserIcon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop"
+                    android:layout_below="@id/officerTag"
+                    android:src="@drawable/ic_vpn_key_black_48dp"
+                    android:layout_centerHorizontal="true"
+                    android:tint="@color/colorPrimary"/>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorGrey"
+                    android:layout_below="@id/loginUserIcon"
+                    android:layout_centerHorizontal="true">
+
+                    <EditText
+                        android:id="@+id/key"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/action_key"
+                        android:inputType="textPassword"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    style="@style/ButtonStructure"
+                    android:id="@+id/auth_button"
+                    android:layout_marginTop="10dp"
+                    android:text="Enter"
+                    android:layout_below="@id/textInput"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="openMenu"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

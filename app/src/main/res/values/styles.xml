@@ -1,0 +1,83 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--node list style-->
+    <style name="NodeListStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/list_item_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+
+    <!--Node List Icons-->
+    <style name="NodeListIcon">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_margin">0dp</item>
+
+    </style>
+
+    <!--Node List Text-->
+    <style name="NodeListText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--Buttons-->
+    <style name="ButtonStructure">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">18dp</item>
+        <item name="android:paddingRight">18dp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <!--MenuActivitymenu icon styles-->
+    <style name="MenuIconStyle">
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_margin">15dp</item>
+    </style>
+
+    <!--MenuActivitymenu icon label styles-->
+    <style name="MenuIconLabelStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <!--MenuActivitymenu icon image styles-->
+    <style name="MenuIconImageStyle">
+        <item name="android:layout_height">65dp</item>
+        <item name="android:layout_width">65dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+</resources>

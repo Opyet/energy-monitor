@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.opyetco.meter.LaboratoryNodesActivity">
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/list1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:background="@color/colorWhite"-->
+                <!--style="@style/NodeListStyle">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/nodelist_thumb1"-->
+                    <!--android:src="@drawable/lab"-->
+                    <!--style="@style/NodeListIcon"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--style="@style/NodeListText"-->
+                    <!--android:layout_toRightOf="@id/nodelist_thumb1"-->
+                    <!--android:text="@string/node_faculty_of_tech_building"-->
+                    <!--/>-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/list2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:background="@color/colorWhite"-->
+                <!--style="@style/NodeListStyle">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/nodelist_thumb2"-->
+                    <!--android:src="@drawable/lab"-->
+                    <!--style="@style/NodeListIcon"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--style="@style/NodeListText"-->
+                    <!--android:layout_toRightOf="@id/nodelist_thumb2"-->
+                    <!--android:text="@string/node_computer_building"-->
+                    <!--/>-->
+            <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+
+    <!--</ScrollView>-->
+
+</android.support.constraint.ConstraintLayout>

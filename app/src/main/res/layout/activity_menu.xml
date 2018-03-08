@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.opyetco.meter.MenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="@color/colorHighlight">
+
+        <!--first row-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/icon1"
+                style="@style/MenuIconStyle"
+                android:onClick="openAdminBlocksList">
+                <ImageView
+                    style="@style/MenuIconImageStyle"
+                    android:src="@drawable/building"
+                    />
+                <TextView
+                    android:text="@string/menu_admin_block"
+                    style="@style/MenuIconLabelStyle"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/icon2"
+                style="@style/MenuIconStyle"
+                android:onClick="openLabList">
+                <ImageView
+                    style="@style/MenuIconImageStyle"
+                    android:src="@drawable/lab"
+                    />
+                <TextView
+                    android:text="@string/menu_laboratory"
+                    style="@style/MenuIconLabelStyle"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--second row-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/icon3"
+                style="@style/MenuIconStyle"
+                android:onClick="openHostelList">
+                <ImageView
+                    style="@style/MenuIconImageStyle"
+                    android:src="@drawable/bed"
+                    />
+                <TextView
+                    android:text="@string/menu_hostel"
+                    style="@style/MenuIconLabelStyle"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/icon4"
+                style="@style/MenuIconStyle"
+                android:onClick="openLectureHallList">
+                <ImageView
+                    style="@style/MenuIconImageStyle"
+                    android:src="@drawable/ic_school_black_48dp"
+                    />
+                <TextView
+                    android:text="@string/menu_lecture_halls"
+                    style="@style/MenuIconLabelStyle"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--third row-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/icon5"
+                style="@style/MenuIconStyle"
+                android:onClick="openBusinessUnitList">
+                <ImageView
+                    style="@style/MenuIconImageStyle"
+                    android:src="@drawable/ic_store_black_48dp"
+                    />
+                <TextView
+                    android:text="@string/menu_business_units"
+                    style="@style/MenuIconLabelStyle"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/icon6"
+                style="@style/MenuIconStyle"
+                android:onClick="openOthersList">
+                <ImageView
+                    style="@style/MenuIconImageStyle"
+                    android:src="@drawable/ic_location_on_black_48dp"
+                    />
+                <TextView
+                    android:text="@string/menu_others"
+                    style="@style/MenuIconLabelStyle"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
