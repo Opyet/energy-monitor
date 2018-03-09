@@ -21,7 +21,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 
-import static com.example.opyetco.meter.AdminBlockNodesActivity.REQUEST_URL;
+//import static com.example.opyetco.meter.AdminBlockNodesActivity.REQUEST_URL;
 
 public class AdminBlockNodesActivity extends AppCompatActivity {
 

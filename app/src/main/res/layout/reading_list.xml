@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/NodeListStyle"
+    >
+    <LinearLayout
+            style="@style/NodeListIcon"
+            android:id="@+id/nodelist_thumb"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TODAY"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1:00AM"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/reading"
+            style="@style/NodeListText"
+            android:layout_toRightOf="@id/nodelist_thumb1"
+            android:text="123.45KWh"
+            />
+    <TextView
+        android:id="@+id/dayAccumulated"
+            style="@style/NodeListText"
+            android:layout_toRightOf="@id/nodelist_thumb1"
+            android:text="123.45KWh"
+            />
+
+
+</RelativeLayout>

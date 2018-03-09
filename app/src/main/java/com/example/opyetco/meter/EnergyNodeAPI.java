@@ -1,8 +1,10 @@
 package com.example.opyetco.meter;
 
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.android.volley.NetworkResponse;
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.JsonRequest;
@@ -29,9 +31,7 @@ public class EnergyNodeAPI  {
     }
     public void getCategoryNode(){}
 
-    public void getLastReading (){
-        RequestQueue resquest = new RequestQueue(Constants.LAST_READING);
-    }
+
     public void setReading(){}
 
     public void getindex(){

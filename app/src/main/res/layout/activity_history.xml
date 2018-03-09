@@ -9,80 +9,16 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <RelativeLayout
-                android:id="@+id/list1"
+            <ListView
+                android:id="@+id/list_view"
                 android:layout_width="match_parent"
-                android:background="@color/colorWhite"
-                style="@style/NodeListStyle">
-
-                <LinearLayout
-                    style="@style/NodeListIcon"
-                    android:id="@+id/nodelist_thumb1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TODAY"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorAccent"
-                        android:textAlignment="center"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="1:00AM"
-                        android:textAlignment="center"
-                        />
-                </LinearLayout>
-
-
-                <TextView
-                    style="@style/NodeListText"
-                    android:layout_toRightOf="@id/nodelist_thumb1"
-                    android:text="123.45KWh"
-                    />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/list2"
-                android:layout_width="match_parent"
-                android:background="@color/colorWhite"
-                style="@style/NodeListStyle">
-
-                <LinearLayout
-                    android:id="@+id/nodelist_thumb2"
-                    style="@style/NodeListIcon"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TODAY"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorAccent"
-                        android:textAlignment="center"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="3:00AM"
-                        android:textAlignment="center"
-                        />
-                </LinearLayout>
-
-                <TextView
-                    style="@style/NodeListText"
-                    android:layout_toRightOf="@id/nodelist_thumb2"
-                    android:text="116.8KWh"
-                    />
-            </RelativeLayout>
+                android:layout_height="match_parent">
+            </ListView>
 
         </LinearLayout>
     </ScrollView>
