@@ -29,7 +29,7 @@ public class ReadingsActivity extends AppCompatActivity {
     }
     public void openHistory(View view){
         Log.d("History reach", "going to history page");
-        Intent i = new Intent(this,HistoryActivity.class);//correct classname
+        Intent i = new Intent(this,DayReadingActivity.class);//correct classname
         startActivity(i);
     }
 }
