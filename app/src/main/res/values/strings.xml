@@ -23,7 +23,7 @@
 
     <!--Others-->
     <string name="officer">AUTHORIZATION KEY</string>
-    <string name="reading">120.26W</string>
+    <string name="reading">N/A</string>
 
     <string name="action_value">Enter in Value</string>
     <string name="today">TODAY</string>

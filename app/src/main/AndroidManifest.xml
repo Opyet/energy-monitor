@@ -56,7 +56,7 @@
             android:label="Set Index" />
         <activity
             android:name=".DayReadingActivity"
-            android:label="View History" />
+            android:label="View Daily History" />
     </application>
 
 </manifest>

@@ -26,6 +26,7 @@ import java.util.List;
 
 public class ReadingsActivity extends AppCompatActivity {
     private TextView dayReading, monthReading, yearReading;
+    private TextView nodeIndex, monthIndex, yearIndex;
     private ProgressDialog pDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,9 @@ public class ReadingsActivity extends AppCompatActivity {
         dayReading = (TextView) findViewById(R.id.nodeReading);
         monthReading = (TextView) findViewById(R.id.monthReading);
         yearReading = (TextView) findViewById(R.id.yearReading) ;
+        nodeIndex = (TextView) findViewById(R.id.nodeIndex);
+        monthIndex = (TextView) findViewById(R.id.monthIndex);
+        yearIndex = (TextView) findViewById(R.id.yearIndex);
 
         new GetLastReading().execute();
     }
@@ -63,6 +67,7 @@ public class ReadingsActivity extends AppCompatActivity {
         protected HashMap<String,String> doInBackground(Void... voids) {
             HttpHandler make = new HttpHandler();
             String readingObj = make.makeServiceCall(Constants.LAST_READING+ "?node=1");
+            String indexObj = make.makeServiceCall(Constants.GET_INDEX + "?node=1");
             HashMap<String,String> lastReading = new HashMap<>();
             try {
                 JSONObject reading = new JSONObject(readingObj);
@@ -70,7 +75,13 @@ public class ReadingsActivity extends AppCompatActivity {
                 lastReading.put("dayAccumulation",reading.getString("dayAccumulation"));
                 lastReading.put("monthAccumulation", reading.getString("monthAccumulation"));
                 lastReading.put("yearAccumulation" , reading.getString("yearAccumulation"));
+                JSONObject index = new JSONObject(indexObj);
+                lastReading.put("nodeIndex" , index.getString("dayIndex"));
+                lastReading.put("monthIndex" , index.getString("monthIndex"));
+                lastReading.put("yearIndex" , index.getString("yearIndex"));
+
                 Log.e("TryReading", lastReading.toString());
+                Log.e("IndexReading", indexObj.toString());
 
             }catch (JSONException except){
                 Log.e("JSonException", except.getMessage());
@@ -89,10 +100,12 @@ public class ReadingsActivity extends AppCompatActivity {
             Log.e("ReadingList", result.toString());
             Log.e("dayAccumulation", dayReading.toString());
 
-            dayReading.setText(result.get("dayAccumulation"));
-            monthReading.setText(result.get("monthAccumulation"));
-            yearReading.setText(result.get("yearAccumulation"));
-
+            dayReading.setText(result.get("dayAccumulation")+"KWh");
+            monthReading.setText(result.get("monthAccumulation")+"KWh");
+            yearReading.setText(result.get("yearAccumulation")+"KWh");
+            nodeIndex.setText(result.get("nodeIndex")+"KWh");
+            monthIndex.setText(result.get("monthIndex")+"KWh");
+            yearIndex.setText(result.get("yearIndex")+"KWh");
         }
     }
 }

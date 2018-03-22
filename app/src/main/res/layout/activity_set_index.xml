@@ -76,7 +76,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginTop="3dp"
+                        android:layout_marginTop="13dp"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:text="TODAY"/>
@@ -84,7 +84,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="13dp"
                         android:textSize="18sp"
                         android:text="@string/reading"/>
                     <android.support.design.widget.TextInputLayout
@@ -97,7 +97,7 @@
                         <EditText
                             android:id="@+id/daily_new_index"
                             android:layout_width="70dp"
-                            android:layout_height="30dp"
+                            android:layout_height="40dp"
                             android:inputType="numberDecimal"/>
 
                     </android.support.design.widget.TextInputLayout>
@@ -112,7 +112,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginTop="3dp"
+                        android:layout_marginTop="13dp"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:text="MONTHLY"/>
@@ -120,7 +120,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="13dp"
                         android:textSize="18sp"
                         android:text="@string/reading"/>
                     <android.support.design.widget.TextInputLayout
@@ -133,7 +133,7 @@
                         <EditText
                             android:id="@+id/monthly_new_index"
                             android:layout_width="70dp"
-                            android:layout_height="30dp"
+                            android:layout_height="40dp"
                             android:inputType="numberDecimal"/>
 
                     </android.support.design.widget.TextInputLayout>
@@ -148,7 +148,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginTop="3dp"
+                        android:layout_marginTop="13dp"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:text="YEARLY"/>
@@ -156,7 +156,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="13dp"
                         android:textSize="18sp"
                         android:text="@string/reading"/>
                     <android.support.design.widget.TextInputLayout
@@ -169,7 +169,7 @@
                         <EditText
                             android:id="@+id/yearly_new_index"
                             android:layout_width="70dp"
-                            android:layout_height="30dp"
+                            android:layout_height="40dp"
                             android:inputType="numberDecimal"/>
 
                     </android.support.design.widget.TextInputLayout>
@@ -182,8 +182,8 @@
                         android:id="@+id/save"
                         android:background="@color/colorPrimary"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="30dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="22dp"
+                        android:layout_marginTop="30dp"
                         android:text="Save"
                         android:layout_centerHorizontal="true"/>
                 </RelativeLayout>

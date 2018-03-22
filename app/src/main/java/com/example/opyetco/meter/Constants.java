@@ -6,7 +6,7 @@ package com.example.opyetco.meter;
 
 public class Constants
 {
-    public static final String APP_URL = "http://121d2bf7.ngrok.io/energymonitor/";
+    public static final String APP_URL = "http://00281e27.ngrok.io/energymonitor/";
     public static final String NAME = APP_URL +"name";
     public static final String LLOGIN_USER = APP_URL + "loginUser";
     public static final String FETCH_CATEGORISES = APP_URL + "fetchCategories";

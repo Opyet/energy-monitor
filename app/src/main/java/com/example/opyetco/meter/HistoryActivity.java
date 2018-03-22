@@ -130,8 +130,8 @@ public class HistoryActivity extends AppCompatActivity {
             super.onPostExecute(result);
             ListAdapter adapter = new SimpleAdapter(
                     HistoryActivity.this,readingList, R.layout.reading_list,
-                    new String[]{"time","reading","dayAccumulated"},
-                    new int[]{R.id.time, R.id.reading,R.id.dayAccumulated}
+                    new String[]{"time","reading"},
+                    new int[]{R.id.time, R.id.reading}
             );
 
             listView.setAdapter(adapter);

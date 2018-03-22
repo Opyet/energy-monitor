@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    style="@style/NodeListStyle"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:textColor="@color/colorBlack"
+        android:textStyle ="bold"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginBottom="2dp"
     >
     <LinearLayout
             style="@style/NodeListIcon"
@@ -23,7 +28,7 @@
                 android:id="@+id/time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1:00AM"
+                android:text="N/A"
                 android:textAlignment="center"
                 />
         </LinearLayout>
@@ -31,16 +36,20 @@
 
     <TextView
         android:id="@+id/reading"
-            style="@style/NodeListText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="70dp"
             android:layout_toRightOf="@id/nodelist_thumb1"
-            android:text="123.45KWh"
+            android:text="N/A"
             />
-    <TextView
-        android:id="@+id/dayAccumulated"
-            style="@style/NodeListText"
-            android:layout_toRightOf="@id/nodelist_thumb1"
-            android:text="123.45KWh"
-            />
+    <!--<TextView-->
+        <!--android:id="@+id/dayAccumulated"-->
+            <!--style="@style/NodeListText"-->
+            <!--android:layout_toRightOf="@id/reading"-->
+            <!--android:text="N/A"-->
+            <!--/>-->
 
 
 </RelativeLayout>

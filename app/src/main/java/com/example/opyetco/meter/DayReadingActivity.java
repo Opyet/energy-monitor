@@ -14,8 +14,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 
 /**
  * Created by kibb on 3/19/18.
@@ -54,10 +58,13 @@ public class DayReadingActivity extends AppCompatActivity {
         }
 
         protected Void doInBackground(Void... arg0) {
+            //getting today's date
+            String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+
             HttpHandler sh = new HttpHandler();
 
             // Making a request to url and getting response
-            String jsonStr = sh.makeServiceCall(Constants.DAY_READING + "?node=1&date=2018-03-12" );
+            String jsonStr = sh.makeServiceCall(Constants.DAY_READING + "?node=1&date="+date);
 
             Log.e(TAG, "Response from url: " + jsonStr);
 
@@ -70,6 +77,8 @@ public class DayReadingActivity extends AppCompatActivity {
                        String nodeId = details.getString("nodeId");
                          String reading = details.getString("reading");
                        String created = details.getString("created");
+                       String timeArr[] = created.split(" ");
+                       created = timeArr[1];
                         String dayAccumulation = details.getString("dayAccumulation");
                         String monthAccumulation = details.getString("monthAccumulation");
                         String yearAccumulation = details.getString("yearAccumulation");
@@ -90,7 +99,7 @@ public class DayReadingActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             Toast.makeText(getApplicationContext(),
-                                    "Json parsing error: " + e.getMessage(),
+                                    "Today, no reading has been saved",
                                     Toast.LENGTH_LONG)
                                     .show();
                         }
@@ -103,7 +112,7 @@ public class DayReadingActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Toast.makeText(getApplicationContext(),
-                                "Couldn't get json from server. Check LogCat for possible errors!",
+                                "Couldn't get data from server. Check your internet connection!",
                                 Toast.LENGTH_LONG)
                                 .show();
                     }
@@ -126,8 +135,8 @@ public class DayReadingActivity extends AppCompatActivity {
             Log.e("ReadingList", readingList.toString());
             ListAdapter adapter = new SimpleAdapter(
                     DayReadingActivity.this,readingList, R.layout.reading_list,
-                    new String[]{"time","reading","dayAccumulated", "monthAcculamuted"},
-                    new int[]{R.id.time, R.id.reading,R.id.dayAccumulated,R.id.monthReading}
+                    new String[]{"created","reading"},
+                    new int[]{R.id.time, R.id.reading}
             );
 
             lv.setAdapter(adapter);
