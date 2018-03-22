@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ListAdapter;
+import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -22,13 +25,15 @@ import java.util.HashMap;
 import java.util.List;
 
 public class ReadingsActivity extends AppCompatActivity {
-
-    private List readings = new ArrayList();
+    private TextView dayReading, monthReading, yearReading;
     private ProgressDialog pDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_readings);
+        dayReading = (TextView) findViewById(R.id.nodeReading);
+        monthReading = (TextView) findViewById(R.id.monthReading);
+        yearReading = (TextView) findViewById(R.id.yearReading) ;
 
         new GetLastReading().execute();
     }
@@ -42,7 +47,7 @@ public class ReadingsActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    private class GetLastReading extends AsyncTask<Void, Void,Void>{
+    private class GetLastReading extends AsyncTask<Void, Void,HashMap<String,String>>{
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -55,23 +60,39 @@ public class ReadingsActivity extends AppCompatActivity {
         }
 
         @Override
-        protected Void doInBackground(Void... voids) {
+        protected HashMap<String,String> doInBackground(Void... voids) {
             HttpHandler make = new HttpHandler();
             String readingObj = make.makeServiceCall(Constants.LAST_READING+ "?node=1");
+            HashMap<String,String> lastReading = new HashMap<>();
             try {
                 JSONObject reading = new JSONObject(readingObj);
-                HashMap<String,String> lastReading = new HashMap<>();
                 lastReading.put("reading",reading.getString("reading"));
                 lastReading.put("dayAccumulation",reading.getString("dayAccumulation"));
                 lastReading.put("monthAccumulation", reading.getString("monthAccumulation"));
                 lastReading.put("yearAccumulation" , reading.getString("yearAccumulation"));
-                readings.add(lastReading);
+                Log.e("TryReading", lastReading.toString());
 
             }catch (JSONException except){
                 Log.e("JSonException", except.getMessage());
             }
+            return  lastReading;
+        }
+        @Override
+        protected void onPostExecute(HashMap<String,String> result) {
+            super.onPostExecute(result);
+            // Dismiss the progress dialog
+            if (pDialog.isShowing())
+                pDialog.dismiss();
+            /**
+             * Updating parsed JSON data into ListView
+             * */
+            Log.e("ReadingList", result.toString());
+            Log.e("dayAccumulation", dayReading.toString());
 
-            return null;
+            dayReading.setText(result.get("dayAccumulation"));
+            monthReading.setText(result.get("monthAccumulation"));
+            yearReading.setText(result.get("yearAccumulation"));
+
         }
     }
 }
