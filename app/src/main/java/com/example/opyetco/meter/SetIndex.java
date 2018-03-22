@@ -10,4 +10,5 @@ public class SetIndex extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_index);
     }
+
 }
